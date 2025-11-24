@@ -10,7 +10,7 @@ const Country = ({ country }) => {
   }
   if (show) {
     return (
-      <>
+      <div>
         <h1>{country.name.common}</h1>
         <p>Capital {country.capital}</p>
         <p>Area {country.area}</p>
@@ -21,8 +21,9 @@ const Country = ({ country }) => {
           )}
         </ul>
         <img src={country.flags["png"]} alt={country.flags["alt"]}></img>
+        <br></br>
         <Button show={show} onClick={toggleShow}/>
-      </>
+      </div>
     )
   } else {
     return (
